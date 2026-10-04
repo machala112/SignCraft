@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+/* Begin PBXBuildFile section */
+		7BF55A72064B4EB6A70F630F /* SignCraftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB37BA197F465DA775DA9B /* SignCraftApp.swift */; };
+		1C83354642594DDAB3BDD495 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F08BD734E462EA3A5D7A3 /* ContentView.swift */; };
+		2F56B2A57E044E57B306BA56 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E331C21F632F4947BE9A7AC1 /* AppStore.swift */; };
+		0A560B2A037C46629B9AA963 /* IPAFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9016163F0BC949FE9CDEC511 /* IPAFile.swift */; };
+		A731ACB7FD1A4ECDBFDC82C9 /* SigningIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2E4BA484F450187516816 /* SigningIdentity.swift */; };
+		1CC7031824F74333B2774872 /* ProvisioningProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187CD626A3A643E491EEF1A1 /* ProvisioningProfile.swift */; };
+		573B69C3B42A4E5ABB2EF765 /* DERWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114AFCC72A4D49AA99A32930 /* DERWriter.swift */; };
+		6F8E4D9AB7F04432806DB261 /* X509.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3177A364D0FC473CB3953017 /* X509.swift */; };
+		5CCF897045434984990C391D /* CMSEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A73F71E0CCC4F0F953D0406 /* CMSEncoder.swift */; };
+		5128DC2822044B07BEDC53D4 /* MachO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F864A56BC434E6CB01B639B /* MachO.swift */; };
+		ADA37EFC5A5444AE98EFC897 /* CodeSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3826F37EC4454D519BEEF5DC /* CodeSignature.swift */; };
+		ADA01575C3824DBB9D8CAF51 /* Signer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDDC64B391413E8ED1EF95 /* Signer.swift */; };
+		5319E1F659DD443299693CE0 /* LocalHTTPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BC95BEED434553B3FC5B30 /* LocalHTTPServer.swift */; };
+		BB7A34CAB0FE44B8A9F34ACB /* Installer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CD1207A04B4A34BBBB111A /* Installer.swift */; };
+		8579BC2E8502423389A90087 /* AppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1622CBB06B3E4AA98A529AD1 /* AppsView.swift */; };
+		34E70D4819F8496C85B179E3 /* CertificatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206AE6687A674C95AEC94C71 /* CertificatesView.swift */; };
+		EE1CB4B48B1D49FBB6889D9B /* SignFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B4EA5BB6A84DBEB69B4E06 /* SignFlowView.swift */; };
+		735CD22C552FD1AC68CB1783 /* Archive+BackingConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A61AF1E167823C6C80ACE /* Archive+BackingConfiguration.swift */; };
+		902A1BA61502B44FB135567E /* Archive+Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4617C82948B226DDC5E8534 /* Archive+Deprecated.swift */; };
+		793C5905948C8F2D00366002 /* Archive+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE1485DAD82AA1181C519A8 /* Archive+Helpers.swift */; };
+		C684804B561592297C5BAF19 /* Archive+MemoryFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707B8E6FB1C377AD9E061B18 /* Archive+MemoryFile.swift */; };
+		2E62D562ADFC29F1867F14B5 /* Archive+Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C8C46D57EF6CBB41336B42 /* Archive+Progress.swift */; };
+		E376D7B4589B5EEDD5BD060E /* Archive+Reading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4167F8F28253733581DC5969 /* Archive+Reading.swift */; };
+		A05918840B52F532832D89AB /* Archive+ReadingDeprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD3FC48B2B6320C755E05FC /* Archive+ReadingDeprecated.swift */; };
+		254E86013877A3D43E1BFCBC /* Archive+Writing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B147F7ED893F8C395257DFB /* Archive+Writing.swift */; };
+		6D6F71CF01DDA8EC1ED37A60 /* Archive+WritingDeprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231934AF72B34A760569FBA1 /* Archive+WritingDeprecated.swift */; };
+		D8C0AD268F29950C7EDE5295 /* Archive+ZIP64.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC4344565629BAC16C47249 /* Archive+ZIP64.swift */; };
+		03781D67BD5F5082E1E8F9DC /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC95BCDEB0011ACD5744F5 /* Archive.swift */; };
+		C51C4474FDF502F47384A7D8 /* Data+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533D1922894732CA25766837 /* Data+Compression.swift */; };
+		F0707DA7ED530DE19CB9590C /* Data+CompressionDeprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC4FCBB6D835383C01A610C /* Data+CompressionDeprecated.swift */; };
+		5D1E0F81B3BC222B4261A82D /* Data+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A80363F794911B25C9663 /* Data+Serialization.swift */; };
+		71E788F3D0E4EEA196C7D1CC /* Date+ZIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00015ECF2AFFE3ECEC07376A /* Date+ZIP.swift */; };
+		25B7E20B0E395930494BCE70 /* Entry+InfoZIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A768B341D1C7DCAAB2E54C /* Entry+InfoZIP.swift */; };
+		1072A1C99A49B303CC991AC3 /* Entry+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A177CC3177BA65B89AB0358 /* Entry+Serialization.swift */; };
+		73735B36CBEF5813AF0F5B19 /* Entry+ZIP64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC9046E0E8659B6718E9F43 /* Entry+ZIP64.swift */; };
+		411E26E55A73261EB7D84D17 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA92487C11D0EAE65E2D6F47 /* Entry.swift */; };
+		85FB364A5057535DB4FD73A5 /* Error+ZIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1F8295BE7F9B3ECDB3595 /* Error+ZIP.swift */; };
+		8CED9E61937E3BCB3B9859B6 /* FileManager+ZIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23547414F3D2F8371FB40794 /* FileManager+ZIP.swift */; };
+		40C5C77B3FFF218DBEEBE120 /* FileManager+ZIPDeprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171DF4711DEE4858E0DEE8CE /* FileManager+ZIPDeprecated.swift */; };
+		9803C4887613A133A147553C /* Shims.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF46DF9AD64C92021A25946A /* Shims.swift */; };
+		A613CD95B03120738ADB2976 /* String+ZIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8158519441D4C1EF71FA5F /* String+ZIP.swift */; };
+		88646500FDF318B2AB0A816A /* URL+ZIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A52BD8504AEC310F236A3 /* URL+ZIP.swift */; };
+/* End PBXBuildFile section */
+/* Begin PBXFileReference section */
+		20CB37BA197F465DA775DA9B /* SignCraftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignCraftApp.swift; sourceTree = "<group>"; };
+		1E1F08BD734E462EA3A5D7A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E331C21F632F4947BE9A7AC1 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		9016163F0BC949FE9CDEC511 /* IPAFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAFile.swift; sourceTree = "<group>"; };
+		E6B2E4BA484F450187516816 /* SigningIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningIdentity.swift; sourceTree = "<group>"; };
+		187CD626A3A643E491EEF1A1 /* ProvisioningProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvisioningProfile.swift; sourceTree = "<group>"; };
+		114AFCC72A4D49AA99A32930 /* DERWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DERWriter.swift; sourceTree = "<group>"; };
+		3177A364D0FC473CB3953017 /* X509.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X509.swift; sourceTree = "<group>"; };
+		7A73F71E0CCC4F0F953D0406 /* CMSEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMSEncoder.swift; sourceTree = "<group>"; };
+		8F864A56BC434E6CB01B639B /* MachO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachO.swift; sourceTree = "<group>"; };
+		3826F37EC4454D519BEEF5DC /* CodeSignature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSignature.swift; sourceTree = "<group>"; };
+		03EDDC64B391413E8ED1EF95 /* Signer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signer.swift; sourceTree = "<group>"; };
+		38BC95BEED434553B3FC5B30 /* LocalHTTPServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalHTTPServer.swift; sourceTree = "<group>"; };
+		59CD1207A04B4A34BBBB111A /* Installer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installer.swift; sourceTree = "<group>"; };
+		1622CBB06B3E4AA98A529AD1 /* AppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsView.swift; sourceTree = "<group>"; };
+		206AE6687A674C95AEC94C71 /* CertificatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatesView.swift; sourceTree = "<group>"; };
+		D5B4EA5BB6A84DBEB69B4E06 /* SignFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignFlowView.swift; sourceTree = "<group>"; };
+		1A88C794B9894BEC89F5CE73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181F17ABE35144D587AD8B65 /* SignCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		235A61AF1E167823C6C80ACE /* Archive+BackingConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Archive+BackingConfiguration.swift"; sourceTree = "<group>"; };
+		E4617C82948B226DDC5E8534 /* Archive+Deprecated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Archive+Deprecated.swift"; sourceTree = "<group>"; };
+		8FE1485DAD82AA1181C519A8 /* Archive+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Archive+Helpers.swift"; sourceTree = "<group>"; };
+		707B8E6FB1C377AD9E061B18 /* Archive+MemoryFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Archive+MemoryFile.swift"; sourceTree = "<group>"; };
+		D4C8C46D57EF6CBB41336B42 /* Archive+Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Archive+Progress.swift"; sourceTree = "<group>"; };
+		4167F8F28253733581DC5969 /* Archive+Reading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Archive+Reading.swift"; sourceTree = "<group>"; };
+		BCD3FC48B2B6320C755E05FC /* Archive+ReadingDeprecated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Archive+ReadingDeprecated.swift"; sourceTree = "<group>"; };
+		2B147F7ED893F8C395257DFB /* Archive+Writing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Archive+Writing.swift"; sourceTree = "<group>"; };
+		231934AF72B34A760569FBA1 /* Archive+WritingDeprecated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Archive+WritingDeprecated.swift"; sourceTree = "<group>"; };
+		ABC4344565629BAC16C47249 /* Archive+ZIP64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Archive+ZIP64.swift"; sourceTree = "<group>"; };
+		94EC95BCDEB0011ACD5744F5 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
+		533D1922894732CA25766837 /* Data+Compression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Compression.swift"; sourceTree = "<group>"; };
+		0CC4FCBB6D835383C01A610C /* Data+CompressionDeprecated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+CompressionDeprecated.swift"; sourceTree = "<group>"; };
+		C56A80363F794911B25C9663 /* Data+Serialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Serialization.swift"; sourceTree = "<group>"; };
+		00015ECF2AFFE3ECEC07376A /* Date+ZIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ZIP.swift"; sourceTree = "<group>"; };
+		F2A768B341D1C7DCAAB2E54C /* Entry+InfoZIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+InfoZIP.swift"; sourceTree = "<group>"; };
+		2A177CC3177BA65B89AB0358 /* Entry+Serialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+Serialization.swift"; sourceTree = "<group>"; };
+		6AC9046E0E8659B6718E9F43 /* Entry+ZIP64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+ZIP64.swift"; sourceTree = "<group>"; };
+		AA92487C11D0EAE65E2D6F47 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		18A1F8295BE7F9B3ECDB3595 /* Error+ZIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+ZIP.swift"; sourceTree = "<group>"; };
+		23547414F3D2F8371FB40794 /* FileManager+ZIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+ZIP.swift"; sourceTree = "<group>"; };
+		171DF4711DEE4858E0DEE8CE /* FileManager+ZIPDeprecated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+ZIPDeprecated.swift"; sourceTree = "<group>"; };
+		CF46DF9AD64C92021A25946A /* Shims.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shims.swift; sourceTree = "<group>"; };
+		4D8158519441D4C1EF71FA5F /* String+ZIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ZIP.swift"; sourceTree = "<group>"; };
+		9C1A52BD8504AEC310F236A3 /* URL+ZIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+ZIP.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+/* Begin PBXFrameworksBuildPhase section */
+		0279715E88AA44B982A2111C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+/* Begin PBXGroup section */
+		CDCFFD02C07243E995C6B100 = {
+			isa = PBXGroup;
+			children = (
+				E0FAA684BD274967ADC8E99E /* SignCraft */,
+				811FDD7614D74C46AF41AD5F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9E6BD36E1E241018F5DA9AF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				20CB37BA197F465DA775DA9B /* SignCraftApp.swift */,
+				1E1F08BD734E462EA3A5D7A3 /* ContentView.swift */,
+				E331C21F632F4947BE9A7AC1 /* AppStore.swift */,
+				1A88C794B9894BEC89F5CE73 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D826C4266EF4499B844096E6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9016163F0BC949FE9CDEC511 /* IPAFile.swift */,
+				E6B2E4BA484F450187516816 /* SigningIdentity.swift */,
+				187CD626A3A643E491EEF1A1 /* ProvisioningProfile.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2C79F8FDFC154EACBC938B3C /* Signing */ = {
+			isa = PBXGroup;
+			children = (
+				114AFCC72A4D49AA99A32930 /* DERWriter.swift */,
+				3177A364D0FC473CB3953017 /* X509.swift */,
+				7A73F71E0CCC4F0F953D0406 /* CMSEncoder.swift */,
+				8F864A56BC434E6CB01B639B /* MachO.swift */,
+				3826F37EC4454D519BEEF5DC /* CodeSignature.swift */,
+				03EDDC64B391413E8ED1EF95 /* Signer.swift */,
+			);
+			path = Signing;
+			sourceTree = "<group>";
+		};
+		CE66DB2C23B9430F84BA1EE8 /* Install */ = {
+			isa = PBXGroup;
+			children = (
+				38BC95BEED434553B3FC5B30 /* LocalHTTPServer.swift */,
+				59CD1207A04B4A34BBBB111A /* Installer.swift */,
+			);
+			path = Install;
+			sourceTree = "<group>";
+		};
+		C8FDC5F9540C418DBA21A860 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1622CBB06B3E4AA98A529AD1 /* AppsView.swift */,
+				206AE6687A674C95AEC94C71 /* CertificatesView.swift */,
+				D5B4EA5BB6A84DBEB69B4E06 /* SignFlowView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E0FAA684BD274967ADC8E99E /* SignCraft */ = {
+			isa = PBXGroup;
+			children = (
+				C9E6BD36E1E241018F5DA9AF /* App */,
+				D826C4266EF4499B844096E6 /* Models */,
+				2C79F8FDFC154EACBC938B3C /* Signing */,
+				CE66DB2C23B9430F84BA1EE8 /* Install */,
+				C8FDC5F9540C418DBA21A860 /* UI */,
+				1AA79F57181BE36091964C52 /* Vendor */,
+			);
+			path = SignCraft;
+			sourceTree = "<group>";
+		};
+		811FDD7614D74C46AF41AD5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				181F17ABE35144D587AD8B65 /* SignCraft.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE64EBE71E597576B841E292 /* ZIPFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				235A61AF1E167823C6C80ACE /* Archive+BackingConfiguration.swift */,
+				E4617C82948B226DDC5E8534 /* Archive+Deprecated.swift */,
+				8FE1485DAD82AA1181C519A8 /* Archive+Helpers.swift */,
+				707B8E6FB1C377AD9E061B18 /* Archive+MemoryFile.swift */,
+				D4C8C46D57EF6CBB41336B42 /* Archive+Progress.swift */,
+				4167F8F28253733581DC5969 /* Archive+Reading.swift */,
+				BCD3FC48B2B6320C755E05FC /* Archive+ReadingDeprecated.swift */,
+				2B147F7ED893F8C395257DFB /* Archive+Writing.swift */,
+				231934AF72B34A760569FBA1 /* Archive+WritingDeprecated.swift */,
+				ABC4344565629BAC16C47249 /* Archive+ZIP64.swift */,
+				94EC95BCDEB0011ACD5744F5 /* Archive.swift */,
+				533D1922894732CA25766837 /* Data+Compression.swift */,
+				0CC4FCBB6D835383C01A610C /* Data+CompressionDeprecated.swift */,
+				C56A80363F794911B25C9663 /* Data+Serialization.swift */,
+				00015ECF2AFFE3ECEC07376A /* Date+ZIP.swift */,
+				F2A768B341D1C7DCAAB2E54C /* Entry+InfoZIP.swift */,
+				2A177CC3177BA65B89AB0358 /* Entry+Serialization.swift */,
+				6AC9046E0E8659B6718E9F43 /* Entry+ZIP64.swift */,
+				AA92487C11D0EAE65E2D6F47 /* Entry.swift */,
+				18A1F8295BE7F9B3ECDB3595 /* Error+ZIP.swift */,
+				23547414F3D2F8371FB40794 /* FileManager+ZIP.swift */,
+				171DF4711DEE4858E0DEE8CE /* FileManager+ZIPDeprecated.swift */,
+				CF46DF9AD64C92021A25946A /* Shims.swift */,
+				4D8158519441D4C1EF71FA5F /* String+ZIP.swift */,
+				9C1A52BD8504AEC310F236A3 /* URL+ZIP.swift */,
+			);
+			path = ZIPFoundation;
+			sourceTree = "<group>";
+		};
+		1AA79F57181BE36091964C52 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				DE64EBE71E597576B841E292 /* ZIPFoundation */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+/* Begin PBXNativeTarget section */
+		07C77BB30CC44DFCA6049166 /* SignCraft */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B46944B78A64956BAB01135 /* Build configuration list for PBXNativeTarget "SignCraft" */;
+			buildPhases = (
+				040D6CDE911E4474B461C065 /* Sources */,
+				0279715E88AA44B982A2111C /* Frameworks */,
+				40B65CCB2F824939AB2A19F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SignCraft;
+			productName = SignCraft;
+			productReference = 181F17ABE35144D587AD8B65 /* SignCraft.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+/* Begin PBXProject section */
+		658A5F3F8C294A8C984F85EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 8240C517EF924C6CB07A6945 /* Build configuration list for PBXProject "SignCraft" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en,);
+			mainGroup = CDCFFD02C07243E995C6B100;
+			packageReferences = (
+			);
+			productRefGroup = 811FDD7614D74C46AF41AD5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07C77BB30CC44DFCA6049166 /* SignCraft */,
+			);
+		};
+/* End PBXProject section */
+/* Begin PBXResourcesBuildPhase section */
+		40B65CCB2F824939AB2A19F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+/* Begin PBXSourcesBuildPhase section */
+		040D6CDE911E4474B461C065 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BF55A72064B4EB6A70F630F /* SignCraftApp.swift in Sources */,
+				1C83354642594DDAB3BDD495 /* ContentView.swift in Sources */,
+				2F56B2A57E044E57B306BA56 /* AppStore.swift in Sources */,
+				0A560B2A037C46629B9AA963 /* IPAFile.swift in Sources */,
+				A731ACB7FD1A4ECDBFDC82C9 /* SigningIdentity.swift in Sources */,
+				1CC7031824F74333B2774872 /* ProvisioningProfile.swift in Sources */,
+				573B69C3B42A4E5ABB2EF765 /* DERWriter.swift in Sources */,
+				6F8E4D9AB7F04432806DB261 /* X509.swift in Sources */,
+				5CCF897045434984990C391D /* CMSEncoder.swift in Sources */,
+				5128DC2822044B07BEDC53D4 /* MachO.swift in Sources */,
+				ADA37EFC5A5444AE98EFC897 /* CodeSignature.swift in Sources */,
+				ADA01575C3824DBB9D8CAF51 /* Signer.swift in Sources */,
+				5319E1F659DD443299693CE0 /* LocalHTTPServer.swift in Sources */,
+				BB7A34CAB0FE44B8A9F34ACB /* Installer.swift in Sources */,
+				8579BC2E8502423389A90087 /* AppsView.swift in Sources */,
+				34E70D4819F8496C85B179E3 /* CertificatesView.swift in Sources */,
+				EE1CB4B48B1D49FBB6889D9B /* SignFlowView.swift in Sources */,
+				735CD22C552FD1AC68CB1783 /* Archive+BackingConfiguration.swift in Sources */,
+				902A1BA61502B44FB135567E /* Archive+Deprecated.swift in Sources */,
+				793C5905948C8F2D00366002 /* Archive+Helpers.swift in Sources */,
+				C684804B561592297C5BAF19 /* Archive+MemoryFile.swift in Sources */,
+				2E62D562ADFC29F1867F14B5 /* Archive+Progress.swift in Sources */,
+				E376D7B4589B5EEDD5BD060E /* Archive+Reading.swift in Sources */,
+				A05918840B52F532832D89AB /* Archive+ReadingDeprecated.swift in Sources */,
+				254E86013877A3D43E1BFCBC /* Archive+Writing.swift in Sources */,
+				6D6F71CF01DDA8EC1ED37A60 /* Archive+WritingDeprecated.swift in Sources */,
+				D8C0AD268F29950C7EDE5295 /* Archive+ZIP64.swift in Sources */,
+				03781D67BD5F5082E1E8F9DC /* Archive.swift in Sources */,
+				C51C4474FDF502F47384A7D8 /* Data+Compression.swift in Sources */,
+				F0707DA7ED530DE19CB9590C /* Data+CompressionDeprecated.swift in Sources */,
+				5D1E0F81B3BC222B4261A82D /* Data+Serialization.swift in Sources */,
+				71E788F3D0E4EEA196C7D1CC /* Date+ZIP.swift in Sources */,
+				25B7E20B0E395930494BCE70 /* Entry+InfoZIP.swift in Sources */,
+				1072A1C99A49B303CC991AC3 /* Entry+Serialization.swift in Sources */,
+				73735B36CBEF5813AF0F5B19 /* Entry+ZIP64.swift in Sources */,
+				411E26E55A73261EB7D84D17 /* Entry.swift in Sources */,
+				85FB364A5057535DB4FD73A5 /* Error+ZIP.swift in Sources */,
+				8CED9E61937E3BCB3B9859B6 /* FileManager+ZIP.swift in Sources */,
+				40C5C77B3FFF218DBEEBE120 /* FileManager+ZIPDeprecated.swift in Sources */,
+				9803C4887613A133A147553C /* Shims.swift in Sources */,
+				A613CD95B03120738ADB2976 /* String+ZIP.swift in Sources */,
+				88646500FDF318B2AB0A816A /* URL+ZIP.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+/* Begin XCBuildConfiguration section */
+		2660070F0DAC40989D71EEBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		28748C80153743A3BFCB8EEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf-with-dsym;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8CB5D6A6907C4CABAB873FF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SignCraft/App/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.signcraft;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8562038BFC994E4BA30F4576 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SignCraft/App/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.signcraft;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+/* Begin XCConfigurationList section */
+		8240C517EF924C6CB07A6945 /* Build configuration list for PBXProject "SignCraft" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2660070F0DAC40989D71EEBA /* Debug */,
+				28748C80153743A3BFCB8EEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B46944B78A64956BAB01135 /* Build configuration list for PBXNativeTarget "SignCraft" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CB5D6A6907C4CABAB873FF4 /* Debug */,
+				8562038BFC994E4BA30F4576 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 658A5F3F8C294A8C984F85EC /* Project object */;
+}

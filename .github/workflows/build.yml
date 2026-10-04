@@ -1,0 +1,98 @@
+name: Build SignCraft IPA
+
+# Builds the app on GitHub's free macOS runner — no Mac needed.
+# - Always produces an UNSIGNED ipa (needs your signature to install).
+# - If you add your Apple certificate as repo secrets, it also produces a
+#   SIGNED ipa ready to install.
+#
+# Secrets (repo Settings → Secrets and variables → Actions), all optional:
+#   P12_BASE64        base64 of your .p12 signing certificate
+#   P12_PASSWORD      password of the .p12
+#   PROFILE_BASE64    base64 of your .mobileprovision profile
+# Make the repo PUBLIC for unlimited free macOS build minutes.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Select latest Xcode
+        run: |
+          XCODE=$(ls -d /Applications/Xcode*.app 2>/dev/null | sort -V | tail -1)
+          echo "Using $XCODE"
+          sudo xcode-select -s "$XCODE/Contents/Developer"
+          xcodebuild -version
+
+      - name: Resolve Swift packages
+        run: >
+          xcodebuild -resolvePackageDependencies
+          -project SignCraft.xcodeproj -scheme SignCraft
+
+      - name: Build app (unsigned)
+        run: >
+          xcodebuild -project SignCraft.xcodeproj -scheme SignCraft
+          -configuration Release -sdk iphoneos -derivedDataPath build
+          CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+          build
+
+      - name: Package unsigned IPA
+        run: |
+          APP=$(find build/Build/Products/Release-iphoneos -maxdepth 1 -name "*.app" | head -1)
+          test -n "$APP" || { echo "ERROR: .app not found"; exit 1; }
+          echo "Packaging $APP"
+          rm -rf Payload && mkdir Payload && cp -R "$APP" Payload/
+          zip -qry SignCraft-unsigned.ipa Payload
+
+      - name: Sign with your certificate (optional)
+        env:
+          P12_B64: ${{ secrets.P12_BASE64 }}
+          P12_PW: ${{ secrets.P12_PASSWORD }}
+          PROFILE_B64: ${{ secrets.PROFILE_BASE64 }}
+        run: |
+          if [ -z "$P12_B64" ]; then
+            echo "No signing secrets set - uploading unsigned IPA only."
+            exit 0
+          fi
+          set -e
+          echo "$P12_B64" | base64 -d > cert.p12
+          echo "$PROFILE_B64" | base64 -d > profile.mobileprovision
+
+          # Temporary keychain for the signing identity
+          KC_PW=$(openssl rand -base64 32)
+          security create-keychain -p "$KC_PW" build.keychain
+          security set-keychain-settings -lut 21600 build.keychain
+          security unlock-keychain -p "$KC_PW" build.keychain
+          security import cert.p12 -k build.keychain -P "$P12_PW" -T /usr/bin/codesign
+          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$KC_PW" build.keychain
+          security list-keychains -s build.keychain $(security list-keychains -d user | tr -d '"')
+          IDENTITY=$(security find-identity -v -p codesigning build.keychain | head -1 | awk -F'"' '{print $2}')
+          echo "Signing identity: $IDENTITY"
+          test -n "$IDENTITY" || { echo "ERROR: no identity"; exit 1; }
+
+          # Install profile + extract its entitlements
+          cp profile.mobileprovision "Payload/SignCraft.app/embedded.mobileprovision"
+          security cms -D -i profile.mobileprovision > profile.plist
+          /usr/libexec/PlistBuddy -x -c "Print Entitlements" profile.plist > entitlements.plist
+
+          # Sign (deep covers the embedded ZIPFoundation framework)
+          /usr/bin/codesign -f --deep -s "$IDENTITY" --entitlements entitlements.plist "Payload/SignCraft.app"
+          /usr/bin/codesign -v "Payload/SignCraft.app" && echo "Signature verified"
+
+          rm -f SignCraft-signed.ipa
+          zip -qry SignCraft-signed.ipa Payload
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: SignCraft-ipa
+          path: |
+            SignCraft-unsigned.ipa
+            SignCraft-signed.ipa
+          if-no-files-found: warn
